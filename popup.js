@@ -1,6 +1,8 @@
 const colorPickerBtn = document.querySelector("#color-picker");
 const colorList = document.querySelector(".all-colors");
+const clear_color = document.querySelector('.clear-all');
 const pickedColors = JSON.parse(localStorage.getItem("picked-colors") || "[]");
+
 
 const copyColor = (element) => {
     navigator.clipboard.writeText(element.dataset.color);
@@ -63,4 +65,17 @@ const activateEyeDropper = async () => {
 
 };
 
+const clearAllColors = () =>{
+
+    // removing from array
+    pickedColors.length=0;
+
+    // removing from local storage
+    localStorage.removeItem("picked-colors");
+
+    // removing from dom
+    colorList.innerHTML="";
+}
+
 colorPickerBtn.addEventListener("click", activateEyeDropper);
+clear_color.addEventListener('click', clearAllColors);

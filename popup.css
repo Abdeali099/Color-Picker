@@ -15,7 +15,6 @@ body {
 }
 
 .popup {
-    border: 1px solid red;
     width: 350px;
 }
 
@@ -43,6 +42,18 @@ body {
 
 .picked-colors {
     margin: 10px 15px;
+}
+
+.hide{
+    display: none;
+}
+
+.default_bg_msg{
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 0.5rem;
 }
 
 .picked-colors header {
